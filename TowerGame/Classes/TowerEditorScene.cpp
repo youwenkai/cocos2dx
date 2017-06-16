@@ -1,6 +1,6 @@
 #include "TowerEditorScene.h"
-#include "TowerPosition.h"
-#include "TowerEditorLayer.h";
+#include "TowerEditorLayer.h"
+#include "TowerEditorOperateLayer.h"
 
 TowerEditorScene::TowerEditorScene(){
 
@@ -17,7 +17,10 @@ Scene* TowerEditorScene::createScene(){
 
 	auto layer = TowerEditorLayer::create();
 
+	auto oprLayer = TowerEditorOperateLayer::create(layer);
+
 	scene->addChild(layer,1);
+	scene->addChild(oprLayer, 2);
 	return scene;
 }
 

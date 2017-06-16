@@ -53,6 +53,8 @@ void TowerEditorLayer::createTowerPosition(Point pos){
 	this->addChild(tPos, 10);
 
 	m_towerPosition.pushBack(tPos);
+
+	log(">>>>>>>>>>>>>>>>>>>>>>>>length= %d", m_towerPosition.size());
 }
 
 void TowerEditorLayer::deleteTowerPosition(BasePosition* existPos){
@@ -65,4 +67,17 @@ void TowerEditorLayer::deleteAllPosition(){
 }
 void TowerEditorLayer::outputPositionToPlistFile(){
 	ValueMap fileDataMap;
+	log(">>>>>>>>>>>>>>>>>>>>>>output func()");
+	int index = 1;
+	for (auto basePos : m_towerPosition){
+		ValueMap data;
+		log("x = %f,y=%f", basePos->getPos().x, basePos->getPos().y);
+		data["x"] = basePos->getPos().x;
+		data["y"] = basePos->getPos().y;
+
+		fileDataMap[StringUtils::toString(index)] = Value(data);
+
+		index++;
+	}
+	FileUtils::getInstance()->writeToFile(fileDataMap,StringUtils::format(sFilePath.c_str(),m_iCurLevel));
 }

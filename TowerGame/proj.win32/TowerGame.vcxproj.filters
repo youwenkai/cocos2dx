@@ -22,6 +22,9 @@
     <Filter Include="game\Layer">
       <UniqueIdentifier>{7ba95087-78b9-431f-85bd-e6bea6bb9bc8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\Utils">
+      <UniqueIdentifier>{eecd6646-b49f-4153-a42f-71e7fbea893e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,6 +48,12 @@
     <ClCompile Include="..\Classes\TowerEditorLayer.cpp">
       <Filter>game\Layer</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\TowerEditorOperateLayer.cpp">
+      <Filter>game\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PositionLoadUtil.cpp">
+      <Filter>game\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -67,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TowerEditorLayer.h">
       <Filter>game\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TowerEditorOperateLayer.h">
+      <Filter>game\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PositionLoadUtil.h">
+      <Filter>game\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,10 @@ private:
 	Vector<BasePosition*> m_towerPosition;
 
 	int m_iCurLevel;
-	
+
+	std::string sFilePath = "tollgate/tower_level_%d.plist";
+
+private:
 	void editorTowerPosition(Point pos);
 
 	BasePosition* findExistTowerPosition(Point pos);

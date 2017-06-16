@@ -1,10 +1,12 @@
-﻿生成启动时间为 2017/6/16 11:34:59。
+﻿生成启动时间为 2017/6/16 15:46:11。
      1>项目“D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\TowerGame.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\audio\include" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\external" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\external\chipmunk\include\chipmunk" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\extensions" /I..\Classes /I.. /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\editor-support" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\platform" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\platform\desktop" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\glfw3\include\win32" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\freetype2\include\win32\freetype2" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\freetype2\include\win32\\" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\TowerEditorLayer.cpp ..\Classes\TowerEditorScene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\audio\include" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\external" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\external\chipmunk\include\chipmunk" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\extensions" /I..\Classes /I.. /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\editor-support" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\platform" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\platform\desktop" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\glfw3\include\win32" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\freetype2\include\win32\freetype2" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\freetype2\include\win32\\" /I"D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\TowerEditorLayer.cpp ..\Classes\TowerEditorOperateLayer.cpp ..\Classes\TowerEditorScene.cpp
          TowerEditorLayer.cpp
+         TowerEditorOperateLayer.cpp
          TowerEditorScene.cpp
-     1>d:\cocos2d\cocosstudio\documents\cocos\cocosprojects\cocos2dx\towergame\classes\towereditorscene.cpp(3): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>d:\cocos2d\cocosstudio\documents\cocos\cocosprojects\cocos2dx\towergame\classes\towereditoroperatelayer.cpp(37): warning C4996: 'cocos2d::ui::Widget::addTouchEventListener': 被声明为已否决
+                 d:\cocos2d\cocosstudio\cocos2d-x\cocos2d-x-3.10\cocos\ui\uiwidget.h(307) : 参见“cocos2d::ui::Widget::addTouchEventListener”的声明
        PreLinkEvent:
          if not exist "D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\" mkdir "D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\"
          xcopy /Y /Q "D:\cocos2d\CocosStudio\Cocos2d-x\cocos2d-x-3.10\prebuilt\win32\*.*" "D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\"
@@ -17,11 +19,10 @@
          Debug.win32\BasePosition.obj
          Debug.win32\HelloWorldScene.obj
          Debug.win32\TowerEditorLayer.obj
+         Debug.win32\TowerEditorOperateLayer.obj
          Debug.win32\TowerEditorScene.obj
          Debug.win32\TowerPosition.obj
          Debug.win32\main.obj
-     1>AppDelegate.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
-            正在创建库 D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\TowerGame.lib 和对象 D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\TowerGame.exp
          TowerGame.vcxproj -> D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\TowerGame.exe
        CustomBuildStep:
          if not exist "D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\" mkdir "D:\cocos2d\CocosStudio\Documents\Cocos\CocosProjects\cocos2dx\TowerGame\proj.win32\Debug.win32\"
@@ -33,4 +34,4 @@
 
 生成成功。
 
-已用时间 00:00:10.75
+已用时间 00:00:17.06

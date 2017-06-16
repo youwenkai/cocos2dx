@@ -3,8 +3,12 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Image Name="geRen_da1.png" />
+        <Image Name="geRen_da2.png" />
+        <Image Name="geRen_da3.png" />
         <Image Name="HelloWorld.png" />
         <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="TowerOperateLayer.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

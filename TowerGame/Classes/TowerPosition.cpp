@@ -51,7 +51,7 @@ bool TowerPosition::init(Point pos, bool isDebug){
 }
 
 void TowerPosition::draw(Renderer *renderer, const Mat4& transform, uint32_t flags){
-	log(">>>>>>>>>>>>>>>>>> func draw()");
+	//log(">>>>>>>>>>>>>>>>>> func draw()");
 	if (m_isDebug){
 		_customCommand.init(_globalZOrder);
 		_customCommand.func = CC_CALLBACK_0(TowerPosition::onDraw, this, transform, flags);
