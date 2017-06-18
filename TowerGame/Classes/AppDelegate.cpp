@@ -1,6 +1,5 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
-#include "TowerEditorScene.h"
+#include "SceneManager.h"
 
 USING_NS_CC;
 
@@ -45,9 +44,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
     //auto scene = HelloWorld::createScene();
 
-	auto scene = TowerEditorScene::createScene();
+	//auto scene = TowerEditorScene::createScene();
     // run
-    director->runWithScene(scene);
+    //director->runWithScene(scene);
+
+	SceneManager::getInstance()->changeScene(SceneManager::en_TollgateEditorScene);
 
     return true;
 }

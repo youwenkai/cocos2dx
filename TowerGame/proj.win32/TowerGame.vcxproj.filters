@@ -25,6 +25,9 @@
     <Filter Include="game\Utils">
       <UniqueIdentifier>{eecd6646-b49f-4153-a42f-71e7fbea893e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\Configer">
+      <UniqueIdentifier>{27ef7446-1045-4844-acfd-11b09e2ef823}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,6 +57,12 @@
     <ClCompile Include="..\Classes\PositionLoadUtil.cpp">
       <Filter>game\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\MonsterPosition.cpp">
+      <Filter>game\Position</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneManager.cpp">
+      <Filter>game\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -82,6 +91,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\PositionLoadUtil.h">
       <Filter>game\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common.h">
+      <Filter>game\Configer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MonsterPosition.h">
+      <Filter>game\Position</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneManager.h">
+      <Filter>game\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

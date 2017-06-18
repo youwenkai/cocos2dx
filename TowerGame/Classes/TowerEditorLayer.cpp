@@ -1,7 +1,9 @@
 #include "TowerEditorLayer.h"
+#include "PositionLoadUtil.h"
 
 TowerEditorLayer::TowerEditorLayer(){
 	m_iCurLevel = 1;
+	m_enMode = enMonsterPosition;
 }
 
 TowerEditorLayer::~TowerEditorLayer(){
@@ -21,10 +23,27 @@ bool TowerEditorLayer::init(){
 
 	listenter->onTouchEnded = [&](Touch* t, Event* e){
 		Point pos = t->getLocation();
-		editorTowerPosition(pos);
+
+		switch (m_enMode)
+		{
+		case enTowerPosition:
+			editorTowerPosition(pos);
+			break;
+		case enMonsterPosition:
+			editorMonsterPosition(pos);
+			break;
+		default:
+			break;
+		}
+
+		
 	};
 
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listenter, this);
+
+
+	
+	loadConfigerFile();
 
 	return true;
 }
@@ -54,7 +73,7 @@ void TowerEditorLayer::createTowerPosition(Point pos){
 
 	m_towerPosition.pushBack(tPos);
 
-	log(">>>>>>>>>>>>>>>>>>>>>>>>length= %d", m_towerPosition.size());
+	//log(">>>>>>>>>>>>>>>>>>>>>>>>length= %d", m_towerPosition.size());
 }
 
 void TowerEditorLayer::deleteTowerPosition(BasePosition* existPos){
@@ -64,12 +83,19 @@ void TowerEditorLayer::deleteTowerPosition(BasePosition* existPos){
 void TowerEditorLayer::deleteAllPosition(){
 	this->removeAllChildren();
 	m_towerPosition.clear();
+	m_monsterPositionList.clear();
 }
 void TowerEditorLayer::outputPositionToPlistFile(){
+	std::string sTowerPositionPath = StringUtils::format(TOWERFILEPATH,m_iCurLevel);
+	outputPositionToPlistFile(m_towerPosition, sTowerPositionPath.c_str());
+
+	std::string sMonsterPositionPath = StringUtils::format(MONSTERFILEPATH, m_iCurLevel);
+	outputPositionToPlistFile(m_monsterPositionList, sMonsterPositionPath.c_str());
+}
+void TowerEditorLayer::outputPositionToPlistFile(Vector<BasePosition *> pList, const char * sPath){
 	ValueMap fileDataMap;
-	log(">>>>>>>>>>>>>>>>>>>>>>output func()");
 	int index = 1;
-	for (auto basePos : m_towerPosition){
+	for (auto basePos : pList){
 		ValueMap data;
 		log("x = %f,y=%f", basePos->getPos().x, basePos->getPos().y);
 		data["x"] = basePos->getPos().x;
@@ -79,5 +105,83 @@ void TowerEditorLayer::outputPositionToPlistFile(){
 
 		index++;
 	}
-	FileUtils::getInstance()->writeToFile(fileDataMap,StringUtils::format(sFilePath.c_str(),m_iCurLevel));
+	FileUtils::getInstance()->writeToFile(fileDataMap, sPath);
+}
+void TowerEditorLayer::loadConfigerFile(){
+	Size visiableSize = Director::getInstance()->getVisibleSize();
+
+	
+
+	/**添加地图背景*/
+	std::string sBG = StringUtils::format(BGPATH, m_iCurLevel);
+
+	Sprite* map = Sprite::create(sBG.c_str());
+
+	map->setPosition(visiableSize.width / 2, visiableSize.height / 2);
+
+	this->addChild(map, 1);
+
+	/**加载塔坐标对象*/
+	std::string sTowerPositionPath = StringUtils::format(TOWERFILEPATH, m_iCurLevel);
+
+	Vector<BasePosition*> towerList = PositionLoadUtil::getInstance()->loadPositionWithFile(sTowerPositionPath.c_str(), enTowerPosition ,this, m_iCurLevel, true);
+
+	m_towerPosition.pushBack(towerList);
+
+	
+	/**加载怪物坐标对象*/
+	std::string sMonsterPositionPath = StringUtils::format(MONSTERFILEPATH, m_iCurLevel);
+
+	Vector<BasePosition*> monsterList = PositionLoadUtil::getInstance()->loadPositionWithFile(sMonsterPositionPath.c_str(),enMonsterPosition ,this, m_iCurLevel, true);
+	
+	m_monsterPositionList.pushBack(monsterList);
+}
+
+void TowerEditorLayer::editorMonsterPosition(Point pos){
+	BasePosition* existPos = findExistMonsterPosition(pos);
+	if (existPos == NULL){
+		createMonsterPosition(pos);
+	}
+	else{
+		deleteMonsterPosition(existPos);
+	}
+}
+BasePosition* TowerEditorLayer::findExistMonsterPosition(Point pos){
+	for (auto basePos : m_monsterPositionList){
+		if (basePos->isClickMe(pos)){
+			return basePos;
+		}
+	}
+	return NULL;
+}
+void TowerEditorLayer::createMonsterPosition(Point pos){
+	MonsterPosition* tPos = MonsterPosition::create(pos, true);
+	this->addChild(tPos, 10);
+	m_monsterPositionList.pushBack(tPos);
+}
+void TowerEditorLayer::deleteMonsterPosition(BasePosition* exist){
+	this->removeChild(exist);
+	m_monsterPositionList.eraseObject(exist);
+}
+void TowerEditorLayer::changeMode(){
+	if (m_enMode == enTowerPosition){
+		m_enMode = enMonsterPosition;
+	}
+	else{
+		m_enMode = enTowerPosition;
+	}
+}
+int TowerEditorLayer::nextLevel(){
+	deleteAllPosition();
+	m_iCurLevel++;
+	loadConfigerFile();
+
+	return m_iCurLevel;
+}
+int TowerEditorLayer::preLevel(){
+	deleteAllPosition();
+	m_iCurLevel--;
+	loadConfigerFile();
+
+	return m_iCurLevel;
 }
