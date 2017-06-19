@@ -1,6 +1,8 @@
 #include "TowerEditorLayer.h"
 #include "PositionLoadUtil.h"
 
+#include "CsvUtil.h"
+
 TowerEditorLayer::TowerEditorLayer(){
 	m_iCurLevel = 1;
 	m_enMode = enMonsterPosition;
@@ -44,6 +46,16 @@ bool TowerEditorLayer::init(){
 
 	
 	loadConfigerFile();
+
+	const char* sPath = "Monster.csv";
+	CsvUtil::getInstance()->loadFile(sPath);
+
+	Value firstMonsterName = CsvUtil::getInstance()->getValue(2, 1, sPath);
+
+	Value secMonsterHP = CsvUtil::getInstance()->getValue(3, 3, sPath);
+
+	log("firstMonsterName=%s", firstMonsterName.asString().c_str());
+	log("secMonsterHP=%s", secMonsterHP.asString().c_str());
 
 	return true;
 }

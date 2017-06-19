@@ -28,6 +28,15 @@
     <Filter Include="game\Configer">
       <UniqueIdentifier>{27ef7446-1045-4844-acfd-11b09e2ef823}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\Utils\Csv">
+      <UniqueIdentifier>{1b4f508d-396b-4ef9-9007-981ad6bf0d7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\Entity">
+      <UniqueIdentifier>{f27428e0-42ad-4296-8966-b56d76fe00f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\Manager">
+      <UniqueIdentifier>{b987785c-908b-4723-92e4-0d8acfd5c784}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -62,6 +71,30 @@
     </ClCompile>
     <ClCompile Include="..\Classes\SceneManager.cpp">
       <Filter>game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StringUtil.cpp">
+      <Filter>game\Utils\Csv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CsvData.cpp">
+      <Filter>game\Utils\Csv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CsvUtil.cpp">
+      <Filter>game\Utils\Csv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity.cpp">
+      <Filter>game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TollgateMapLayer.cpp">
+      <Filter>game\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TollgateScene.cpp">
+      <Filter>game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HeroManager.cpp">
+      <Filter>game\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TowerBorder.cpp">
+      <Filter>game\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +133,30 @@
     </ClInclude>
     <ClInclude Include="..\Classes\SceneManager.h">
       <Filter>game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StringUtil.h">
+      <Filter>game\Utils\Csv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CsvData.h">
+      <Filter>game\Utils\Csv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CsvUtil.h">
+      <Filter>game\Utils\Csv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity.h">
+      <Filter>game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TollgateMapLayer.h">
+      <Filter>game\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TollgateScene.h">
+      <Filter>game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HeroManager.h">
+      <Filter>game\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TowerBorder.h">
+      <Filter>game\Entity</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

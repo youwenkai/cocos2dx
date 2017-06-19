@@ -148,10 +148,18 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\BasePosition.cpp" />
+    <ClCompile Include="..\Classes\CsvData.cpp" />
+    <ClCompile Include="..\Classes\CsvUtil.cpp" />
+    <ClCompile Include="..\Classes\Entity.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\HeroManager.cpp" />
     <ClCompile Include="..\Classes\MonsterPosition.cpp" />
     <ClCompile Include="..\Classes\PositionLoadUtil.cpp" />
     <ClCompile Include="..\Classes\SceneManager.cpp" />
+    <ClCompile Include="..\Classes\StringUtil.cpp" />
+    <ClCompile Include="..\Classes\TollgateMapLayer.cpp" />
+    <ClCompile Include="..\Classes\TollgateScene.cpp" />
+    <ClCompile Include="..\Classes\TowerBorder.cpp" />
     <ClCompile Include="..\Classes\TowerEditorLayer.cpp" />
     <ClCompile Include="..\Classes\TowerEditorOperateLayer.cpp" />
     <ClCompile Include="..\Classes\TowerEditorScene.cpp" />
@@ -162,10 +170,18 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\BasePosition.h" />
     <ClInclude Include="..\Classes\Common.h" />
+    <ClInclude Include="..\Classes\CsvData.h" />
+    <ClInclude Include="..\Classes\CsvUtil.h" />
+    <ClInclude Include="..\Classes\Entity.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\HeroManager.h" />
     <ClInclude Include="..\Classes\MonsterPosition.h" />
     <ClInclude Include="..\Classes\PositionLoadUtil.h" />
     <ClInclude Include="..\Classes\SceneManager.h" />
+    <ClInclude Include="..\Classes\StringUtil.h" />
+    <ClInclude Include="..\Classes\TollgateMapLayer.h" />
+    <ClInclude Include="..\Classes\TollgateScene.h" />
+    <ClInclude Include="..\Classes\TowerBorder.h" />
     <ClInclude Include="..\Classes\TowerEditorLayer.h" />
     <ClInclude Include="..\Classes\TowerEditorOperateLayer.h" />
     <ClInclude Include="..\Classes\TowerEditorScene.h" />
