@@ -1,5 +1,6 @@
 #include "SceneManager.h"
 #include "TowerEditorScene.h"
+#include "TollgateScene.h"
 
 SceneManager* SceneManager::instance = NULL; 
 
@@ -27,6 +28,7 @@ void SceneManager::changeScene(EnumSceneType enSceneType){
 	switch (enSceneType)
 	{
 	case SceneManager::en_TollgateScene:     //关卡场景
+		pScene = TollgateScene::createScene();
 		break;
 	case SceneManager::en_TollgateEditorScene: //关卡编辑场景
 		pScene = TowerEditorScene::createScene();

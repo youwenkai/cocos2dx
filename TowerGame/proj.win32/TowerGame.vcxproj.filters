@@ -96,6 +96,9 @@
     <ClCompile Include="..\Classes\TowerBorder.cpp">
       <Filter>game\Entity</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Hero.cpp">
+      <Filter>game\Entity</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -156,6 +159,9 @@
       <Filter>game\Manager</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TowerBorder.h">
+      <Filter>game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Hero.h">
       <Filter>game\Entity</Filter>
     </ClInclude>
   </ItemGroup>

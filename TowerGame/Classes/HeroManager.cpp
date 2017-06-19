@@ -35,7 +35,7 @@ void HeroManager::createTowerBorder(int iCurLevel){
 	for (auto tPos : m_towerPositionList){
 		TowerBorder* border = TowerBorder::create();
 		border->upgrade();
-		border->upgrade();
+		//border->upgrade();
 		border->setPosition(tPos->getPos());
 		this->addChild(border);
 

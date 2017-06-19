@@ -48,7 +48,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // run
     //director->runWithScene(scene);
 
-	SceneManager::getInstance()->changeScene(SceneManager::en_TollgateEditorScene);
+	SceneManager::getInstance()->changeScene(SceneManager::en_TollgateScene);
+	//SceneManager::getInstance()->changeScene(SceneManager::en_TollgateEditorScene);
 
     return true;
 }

@@ -2,6 +2,7 @@
 #define _TollgateMapLayer_H_
 
 #include "cocos2d.h"
+#include "HeroManager.h"
 USING_NS_CC;
 
 class TollgateMapLayer :public Layer{
@@ -15,6 +16,8 @@ public:
 
 private:
 	int m_iCurLevel;
+
+	HeroManager* m_heroMgr;
 
 	void loadConfig();
 };

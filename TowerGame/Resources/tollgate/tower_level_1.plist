@@ -6,23 +6,37 @@
         <key>1</key>
         <dict>
             <key>x</key>
-            <real>19.0000000</real>
+            <real>164.5184784</real>
             <key>y</key>
-            <real>608.0000000</real>
+            <real>504.6954041</real>
         </dict>
         <key>2</key>
         <dict>
             <key>x</key>
-            <real>97.0000000</real>
+            <real>715.6124268</real>
             <key>y</key>
-            <real>601.0000000</real>
+            <real>435.8089294</real>
         </dict>
         <key>3</key>
         <dict>
             <key>x</key>
-            <real>175.0000000</real>
+            <real>379.1653748</real>
             <key>y</key>
-            <real>598.0000000</real>
+            <real>168.2488708</real>
+        </dict>
+        <key>4</key>
+        <dict>
+            <key>x</key>
+            <real>479.0011292</real>
+            <key>y</key>
+            <real>584.5641479</real>
+        </dict>
+        <key>5</key>
+        <dict>
+            <key>x</key>
+            <real>213.4384460</real>
+            <key>y</key>
+            <real>319.0009155</real>
         </dict>
     </dict>
 </plist>

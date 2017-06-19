@@ -24,7 +24,7 @@ Vector<BasePosition*> PositionLoadUtil::loadPositionWithFile(const char* sFilePa
 
 	int size = fileDataMap.size();
 
-	for (int i = 1; i < size; i++){
+	for (int i = 1; i <= size; i++){
 		Value value = fileDataMap.at(StringUtils::toString(i));
 
 		ValueMap data = value.asValueMap();

@@ -21,8 +21,12 @@ bool TollgateMapLayer::init(){
 	}
 	loadConfig();
 
-
+	/**创建英雄管理器*/
+	m_heroMgr = HeroManager::createWithLevel(m_iCurLevel);
+	this->addChild(m_heroMgr, HERO_LAYER_LVL);
 	
+
+	return true;
 }
 void TollgateMapLayer::loadConfig(){
 	Size size = Director::getInstance()->getVisibleSize();
