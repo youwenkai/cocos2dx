@@ -154,6 +154,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\Hero.cpp" />
     <ClCompile Include="..\Classes\HeroManager.cpp" />
+    <ClCompile Include="..\Classes\MonsterManager.cpp" />
     <ClCompile Include="..\Classes\MonsterPosition.cpp" />
     <ClCompile Include="..\Classes\PositionLoadUtil.cpp" />
     <ClCompile Include="..\Classes\SceneManager.cpp" />
@@ -174,9 +175,11 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\CsvData.h" />
     <ClInclude Include="..\Classes\CsvUtil.h" />
     <ClInclude Include="..\Classes\Entity.h" />
+    <ClInclude Include="..\Classes\EnumHeroPropConfType.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\Hero.h" />
     <ClInclude Include="..\Classes\HeroManager.h" />
+    <ClInclude Include="..\Classes\MonsterManager.h" />
     <ClInclude Include="..\Classes\MonsterPosition.h" />
     <ClInclude Include="..\Classes\PositionLoadUtil.h" />
     <ClInclude Include="..\Classes\SceneManager.h" />

@@ -3,6 +3,7 @@
 
 #include "Entity.h"
 
+class Hero;
 
 class TowerBorder :public Entity{
 public:
@@ -13,5 +14,15 @@ public:
 
 	/**Éý¼¶*/
 	void upgrade();
+
+
+	bool isClickMe(Point pos);
+	void bindHero(Hero* hero);
+	Hero* getHero();
+	void deleteHero();
+
+private:
+	Hero* m_hero;
+
 };
 #endif

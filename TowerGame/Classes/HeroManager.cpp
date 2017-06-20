@@ -1,6 +1,7 @@
 #include "HeroManager.h"
 #include "Common.h"
 #include "PositionLoadUtil.h"
+#include "Hero.h"
 
 HeroManager::HeroManager(){
 
@@ -28,6 +29,30 @@ bool HeroManager::initWithLevel(int iCurLevel){
 
 	createTowerBorder(iCurLevel);
 
+	auto listener = EventListenerTouchOneByOne::create();
+
+	listener->onTouchBegan = [](Touch* t, Event* e){
+		return true;
+	};
+	listener->onTouchEnded = [&](Touch* t, Event* e){
+		Point pos = t->getLocation();
+
+		TowerBorder* clickBorder = findClickTowerBorder(pos);
+
+		if (clickBorder == NULL){
+			return;
+		}
+		if (clickBorder->getHero() == NULL){
+			Hero* hero = Hero::createFromCsvFileByID(1);
+			hero->setPosition(clickBorder->getPosition());
+			this->addChild(hero, TOWER_POS_LAYER_LVL);
+
+			clickBorder->bindHero(hero);
+		}
+	};
+
+
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 	return true;
 }
 
@@ -46,4 +71,13 @@ void HeroManager::createTowerPosition(Point pos){
 	TowerPosition* tPos = TowerPosition::create(pos, true);
 	this->addChild(tPos, TOWER_POS_LAYER_LVL);
 	m_towerPositionList.pushBack(tPos);
+}
+TowerBorder* HeroManager::findClickTowerBorder(Point pos){
+	for (auto tBorder : m_towerBorderList){
+		if (tBorder->isClickMe(pos)){
+			return tBorder;
+		}
+	}
+
+	return NULL;
 }

@@ -1,5 +1,7 @@
 #include "Hero.h"
 #include "CsvUtil.h"
+#include "EnumHeroPropConfType.h"
+#include "Common.h"
 
 Hero::Hero(){
 
@@ -54,6 +56,26 @@ bool Hero::initFromCsvFileByID(int iHeroID){
 		std::string sHeroId = StringUtils::toString(iHeroID);
 		
 		//寻找id所在的行
-		//int iLine = csvUtil->findValueInWithLine()
+		int iLine = csvUtil->findValueInWithLine(sHeroId.c_str(),
+			enHeroPropConf_ID, PATH_CSV_HERO_CONF);
+
+		CC_BREAK_IF(iLine < 0);
+
+		setID(iHeroID);
+		setiModeID(csvUtil->getInt(iLine, enHeroPropConf_ModelID, PATH_CSV_HERO_CONF));
+		setiBaseAtk(csvUtil->getInt(iLine, enHeroPropConf_BaseAtk, PATH_CSV_HERO_CONF));
+		setiCurAtk(getiBaseAtk());
+		setiAtkSpeed(csvUtil->getInt(iLine, enHeroPropConf_AtkSpeed, PATH_CSV_HERO_CONF));
+		setiAtkRange(csvUtil->getInt(iLine, enHeroPropConf_AtkRange, PATH_CSV_HERO_CONF));
+		setiUpgradeCostBase(csvUtil->getInt(iLine, enHeroPropConf_UpgradeAtkBase, PATH_CSV_HERO_CONF));
+		setfUpgradeAtkBase(csvUtil->getInt(iLine, enHeroPropConf_UpgradeAtkBase, PATH_CSV_HERO_CONF));
+
+		Sprite* sprite = Sprite::create(StringUtils::format(HERO_SPRITESRC_PATH, iHeroID).c_str());
+		CC_BREAK_IF(!sprite);
+		CC_BREAK_IF(!init(sprite));
+		bRet = true;
+
 	} while (0);
+
+	return bRet;
 }

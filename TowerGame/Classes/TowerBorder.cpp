@@ -1,8 +1,9 @@
 #include "TowerBorder.h"
-
+#include "Hero.h"
 
 TowerBorder::TowerBorder(){
 	m_iLevel = 1;
+	m_hero = NULL;
 }
 TowerBorder::~TowerBorder(){
 
@@ -32,5 +33,31 @@ void TowerBorder::upgrade(){
 		sprite->setOpacity(80);
 		sprite->runAction(repeat);
 		this->addChild(sprite, 10);
+	}
+}
+bool TowerBorder::isClickMe(Point pos){
+	Size size = getSprite()->getContentSize();
+	Point borderPos = getPosition();
+
+	Point srcPos = Point(borderPos.x - size.width / 2, borderPos.y + size.height / 2);
+	Point destPos = Point(borderPos.x + size.width / 2, borderPos.y - size.height / 2);
+
+	if (pos.x >= srcPos.x && pos.x <= destPos.x && pos.y >= destPos.y && pos.y <= srcPos.y){
+		return true;
+	}
+
+	return false;
+}
+
+void TowerBorder::bindHero(Hero* hero){
+	m_hero = hero;
+}
+Hero* TowerBorder::getHero(){
+	return m_hero;
+}
+void TowerBorder::deleteHero(){
+	if (m_hero != NULL){
+		m_hero->removeFromParent();
+		m_hero = NULL;
 	}
 }

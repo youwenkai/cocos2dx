@@ -24,6 +24,8 @@ private:
 	void createTowerBorder(int iCurLevel);
 
 	void createTowerPosition(Point pos);
+
+	TowerBorder* findClickTowerBorder(Point pos);
 };
 
 #endif

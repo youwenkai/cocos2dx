@@ -82,3 +82,22 @@ const int CsvUtil::getBool(int iRow, int iCol, const char* cvsFilePath){
 	Value colValue = getValue(iRow, iCol, cvsFilePath);
 	return colValue.asBool();
 }
+const int CsvUtil::findValueInWithLine(const char* chValue, int iValueCol, const char* sFilePath){
+	auto csvData = mCsvMap.at(sFilePath);
+	
+	if (csvData == NULL){
+		loadFile(sFilePath);
+		csvData = mCsvMap.at(sFilePath);
+	}
+	int size = csvData->getRowColNum().width;
+	for (int i = 0; i < size;i++)
+	{
+		auto line = csvData->getSingleLineData(i);
+		for (auto prop : line){
+			if (prop.asString() == chValue){
+				return line.at(iValueCol).asInt();
+			}
+		}
+	}
+	return -1;
+}

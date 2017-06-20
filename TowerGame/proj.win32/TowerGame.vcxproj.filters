@@ -99,6 +99,9 @@
     <ClCompile Include="..\Classes\Hero.cpp">
       <Filter>game\Entity</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\MonsterManager.cpp">
+      <Filter>game\Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -163,6 +166,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Hero.h">
       <Filter>game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnumHeroPropConfType.h">
+      <Filter>game\Configer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MonsterManager.h">
+      <Filter>game\Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
